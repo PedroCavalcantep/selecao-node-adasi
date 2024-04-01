@@ -1,0 +1,182 @@
+{
+    "tables": {
+        "atividades": {
+            "tableName": "atividades",
+            "schema": {
+                "id": {
+                    "defaultValue": {
+                        "internal": true,
+                        "value": "Sequelize.UUIDV4"
+                    },
+                    "primaryKey": true,
+                    "allowNull": false,
+                    "unique": true,
+                    "field": "id",
+                    "seqType": "Sequelize.UUID"
+                },
+                "tarefa": {
+                    "field": "tarefa",
+                    "references": {
+                        "model": "tarefas",
+                        "key": "id"
+                    },
+                    "allowNull": false,
+                    "seqType": "Sequelize.UUID"
+                },
+                "estudante": {
+                    "field": "estudante",
+                    "references": {
+                        "model": "estudantes",
+                        "key": "id"
+                    },
+                    "allowNull": false,
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "data": {
+                    "allowNull": false,
+                    "field": "data",
+                    "seqType": "Sequelize.DATE"
+                },
+                "agendamento_inicio": {
+                    "allowNull": false,
+                    "field": "agendamento_inicio",
+                    "seqType": "Sequelize.TIME"
+                },
+                "agendamento_termino": {
+                    "allowNull": false,
+                    "field": "agendamento_termino",
+                    "seqType": "Sequelize.TIME"
+                },
+                "hora_inicio": {
+                    "allowNull": true,
+                    "field": "hora_inicio",
+                    "seqType": "Sequelize.TIME"
+                },
+                "hora_termino": {
+                    "allowNull": true,
+                    "field": "hora_termino",
+                    "seqType": "Sequelize.TIME"
+                }
+            },
+            "indexes": []
+        },
+        "cursos": {
+            "tableName": "cursos",
+            "schema": {
+                "id": {
+                    "primaryKey": true,
+                    "defaultValue": {
+                        "internal": true,
+                        "value": "Sequelize.UUIDV4"
+                    },
+                    "allowNull": false,
+                    "unique": true,
+                    "field": "id",
+                    "seqType": "Sequelize.UUID"
+                },
+                "nome": {
+                    "allowNull": false,
+                    "field": "nome",
+                    "seqType": "Sequelize.STRING"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        },
+        "estudantes": {
+            "tableName": "estudantes",
+            "schema": {
+                "id": {
+                    "primaryKey": true,
+                    "autoIncrement": true,
+                    "allowNull": false,
+                    "unique": true,
+                    "field": "id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "cpf": {
+                    "unique": true,
+                    "allowNull": false,
+                    "field": "cpf",
+                    "seqType": "Sequelize.STRING"
+                },
+                "nome": {
+                    "allowNull": false,
+                    "field": "nome",
+                    "seqType": "Sequelize.STRING"
+                },
+                "curso": {
+                    "allowNull": false,
+                    "references": {
+                        "model": "cursos",
+                        "key": "id"
+                    },
+                    "field": "curso",
+                    "seqType": "Sequelize.UUID"
+                },
+                "matricula": {
+                    "unique": true,
+                    "allowNull": false,
+                    "field": "matricula",
+                    "seqType": "Sequelize.STRING"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        },
+        "tarefas": {
+            "tableName": "tarefas",
+            "schema": {
+                "id": {
+                    "defaultValue": {
+                        "internal": true,
+                        "value": "Sequelize.UUIDV4"
+                    },
+                    "primaryKey": true,
+                    "allowNull": false,
+                    "unique": true,
+                    "field": "id",
+                    "seqType": "Sequelize.UUID"
+                },
+                "nome": {
+                    "allowNull": false,
+                    "field": "nome",
+                    "seqType": "Sequelize.STRING"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        }
+    },
+    "path": "C:\\Users\\dinho\\OneDrive\\Área de Trabalho\\api\\migrations\\_current.json",
+    "backupPath": "C:\\Users\\dinho\\OneDrive\\Área de Trabalho\\api\\migrations\\_current_bak.json",
+    "exists": false,
+    "revision": 1
+}
