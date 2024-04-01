@@ -1,0 +1,476 @@
+{
+	"info": {
+		"_postman_id": "6d92d7fe-855c-4468-8c01-66033a2bd7e2",
+		"name": "API ADASI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33091480"
+	},
+	"item": [
+		{
+			"name": "Estudantes",
+			"item": [
+				{
+					"name": "Create estudante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\" : \"22\",\r\n    \"nome\" : \"Pedro\",\r\n    \"curso\" : \"d02691a5-d2b6-4aa0-8d97-3712ab498c1c\",\r\n    \"matricula\" : \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/estudantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"estudantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List estudantes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/estudantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"estudantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get estudante",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/estudantes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"estudantes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update estudantes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"11232212131\",\r\n    \"nome\": \"pedro\",\r\n    \"curso\": \"c9d47e78-ba6e-4e2f-abd2-ab4c1aae062d\",\r\n    \"matricula\": \"1231223221\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/estudantes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"estudantes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete estudante",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/estudantes/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"estudantes",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cursos",
+			"item": [
+				{
+					"name": "Create curso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"ads\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cursos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List cursos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cursos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Curso",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cursos/c9d47e78-ba6e-4e2f-abd2-ab4c1aae062d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cursos",
+								"c9d47e78-ba6e-4e2f-abd2-ab4c1aae062d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Curso",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cursos/6b08cac2-aac3-4f1d-9cbd-721e23443d43",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cursos",
+								"6b08cac2-aac3-4f1d-9cbd-721e23443d43"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tarefas",
+			"item": [
+				{
+					"name": "Create tarefa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"levar a vovó no karate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/tarefas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tarefas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List tarefas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/tarefas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tarefas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update tarefa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/tarefas/37be2a27-be35-417a-901a-d22da825a010",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tarefas",
+								"37be2a27-be35-417a-901a-d22da825a010"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete tarefa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/tarefas/5960c35a-1782-4818-9051-794051fa3ac4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tarefas",
+								"5960c35a-1782-4818-9051-794051fa3ac4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Atividades",
+			"item": [
+				{
+					"name": "Create atividade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"tarefa\": \"0ed030ef-e284-4f96-ba84-04a3a91b1323\",\r\n  \"estudante\": 1,\r\n  \"data\": \"2024-04-01\",\r\n  \"agendamento_inicio\": \"15:40\",\r\n  \"agendamento_termino\": \"17:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/atividades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"atividades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List atividades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/atividades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"atividades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update atividade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tarefa\": \"cc3a73e4-dc63-420f-b234-400f8d22cad0\",\r\n  \"estudante\": 1,\r\n  \"data\": \"2024-04-01\",\r\n  \"agendamento_inicio\": \"12:00\",\r\n  \"agendamento_termino\": \"15:10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/atividades/ec337af7-0986-4f8d-853a-7e45da6138e5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"atividades",
+								"ec337af7-0986-4f8d-853a-7e45da6138e5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete atividade",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/atividades/c7219694-6a0b-4319-a3ea-b67d9bf51a11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"atividades",
+								"c7219694-6a0b-4319-a3ea-b67d9bf51a11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Iniciar atividade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/atividades/iniciar/35bf2320-c19d-460d-9124-887055c6de64",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"atividades",
+								"iniciar",
+								"35bf2320-c19d-460d-9124-887055c6de64"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Encerrar atividade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/atividades/encerrar/35bf2320-c19d-460d-9124-887055c6de64",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"atividades",
+								"encerrar",
+								"35bf2320-c19d-460d-9124-887055c6de64"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
